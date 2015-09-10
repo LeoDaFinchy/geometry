@@ -3,7 +3,7 @@ var Vector2 = function(x,y){
     this.y = y || 0.0;
 };
 
-exports['Vector2'] = Vector2;
+exports.Vector2 = Vector2;
 
 Object.defineProperties(Vector2.prototype, {
     //  Get
