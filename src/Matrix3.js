@@ -72,6 +72,26 @@ Object.defineProperties(Matrix3.prototype, {
             ]);
         }
     },
+    position: {
+        get: function(){
+            return new Vector2(this.m[2], this.m[5]);
+        }
+    },
+    direction: {
+        get: function(){
+            return this.rotateVector2(Vector2.unit);
+        }
+    },
+    x: {
+        get: function(){
+            return this.rotateVector2(Vector2.x);
+        }
+    },
+    y: {
+        get: function(){
+            return this.rotateVector2(Vector2.y);
+        }
+    }
     //  Function
     applyMatrix3: {
         value: function(other){
