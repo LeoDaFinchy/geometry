@@ -91,7 +91,7 @@ Object.defineProperties(Matrix3.prototype, {
         get: function(){
             return this.rotateVector2(Vector2.y);
         }
-    }
+    },
     //  Function
     applyMatrix3: {
         value: function(other){
