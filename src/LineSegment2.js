@@ -29,12 +29,12 @@ Object.defineProperties(LineSegment2.prototype, {
         }
     },
     linearInterpolation:{
-        value: function(t):{
+        value: function(t){
             return Vector2.linearInterpolation(this.a, this.b, t);
         }
     },
     lerp:{
-        value: function(t):{
+        value: function(t){
             return this.linearInterpolation(t);
         }
     },
