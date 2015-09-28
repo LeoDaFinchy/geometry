@@ -98,6 +98,18 @@ Object.defineProperties(Vector2.prototype, {
             return this;
         }
     },
+    tangentOfLength: {
+        value: function(length)
+        {
+            return this.tangent.multiplyByScalar(length)
+        }
+    },
+    normalOfLength: {
+        value: function(length)
+        {
+            return this.tangent.multiplyByScalar(length)
+        }
+    }
 });
 
 Object.defineProperties(Vector2, {
@@ -137,6 +149,21 @@ Object.defineProperties(Vector2, {
         value: function(obj)
         {
             return new Vector2(obj.x, obj.y);
+        }
+    },
+    displacement: {
+        value: function(a, b){
+            return b._.subtract(a);
+        }
+    },
+    linearInterpolation: {
+        value: function(a, b, t){
+            return Vector2.displacement(a, b).multiplyByScalar(t).add(a);
+        }
+    },
+    lerp: {
+        value: function(a, b, t){
+            return Vector2.linearInterpolation(a, b, t);
         }
     }
 });

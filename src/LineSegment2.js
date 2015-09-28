@@ -28,6 +28,16 @@ Object.defineProperties(LineSegment2.prototype, {
             return this.offset.normal;
         }
     },
+    linearInterpolation:{
+        value: function(t):{
+            return Vector2.linearInterpolation(this.a, this.b, t);
+        }
+    },
+    lerp:{
+        value: function(t):{
+            return this.linearInterpolation(t);
+        }
+    },
     intersect:{
         value: function(targets){
             return targets.map(function(value){
