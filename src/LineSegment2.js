@@ -11,6 +11,7 @@ exports['LineSegment2'] = LineSegment2;
 exports['LineSegment2Collection'] = LineSegment2Collection;
 
 var Intersect2 = require('./Intersect2').Intersect2;
+var Vector2 = require('./Vector2').Vector2;
 
 Object.defineProperties(LineSegment2.prototype, {
     offset:{
