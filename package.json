@@ -1,6 +1,6 @@
 {
   "name": "geometry",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Geometry Library",
   "main": "index.js",
   "scripts": {
